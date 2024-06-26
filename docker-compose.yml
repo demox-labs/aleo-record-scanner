@@ -1,0 +1,52 @@
+services:
+  aleo-db:
+    profiles: [ "dev" ]
+    image: postgres
+    restart: always
+    ports: 
+      - '${DB_PORT}:5432'
+    volumes:
+      - db:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: ${DB_NAME}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASS}
+  aleo-db-unit-test:
+    profiles: [ "ci-test", "test" ]
+    container_name: unittest
+    image: postgres
+    ports:
+      - '${DB_TEST_PORT}:${DB_TEST_PORT}'
+    environment:
+      POSTGRES_DB: ${DB_TEST_NAME}
+      POSTGRES_USER: ${DB_TEST_USER}
+      POSTGRES_PASSWORD: ${DB_TEST_PASS}
+    expose:
+      - '${DB_TEST_PORT}'
+    # reassign the test port to be used instead of postgres' default 5432
+    command: -p ${DB_TEST_PORT}
+  rpc:
+    profiles: [ "ci-test" ]
+    container_name: local-aleo-rpc
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: ${RPC_TARGET}
+    depends_on:
+      - aleo-db-unit-test
+    ports:
+      - ${API_PORT}:${API_PORT}
+    tty: true
+  redis:
+    profiles: [ "dev", "ci-test", "test" ]
+    image: redis:latest
+    restart: always
+    ports: 
+      - '6379:6379'
+    volumes:
+      - redis-data:/var/lib/redis/data
+
+volumes:
+  db:
+    driver: local
+  redis-data:

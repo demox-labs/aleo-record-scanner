@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+message RecordInfo {
+  string transition_id = 1;
+  string nonce_x = 2;
+  string nonce_y = 3;
+  string owner_x = 4;
+  int32 output_index = 5;
+}
+
+message RecordInfoList {
+  repeated RecordInfo records = 1;
+}

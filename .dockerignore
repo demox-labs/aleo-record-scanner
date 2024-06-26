@@ -1,0 +1,17 @@
+# Ignore all files by default
+*
+
+# White list
+!aleo-tagger/
+!src/
+!views/
+!webpack.config.js
+!babel.config.json
+!yarn.lock
+!package.json
+!tsconfig.json
+!.env
+!Dockerfile
+!jest.config.js
+!__tests__/
+!.husky/
