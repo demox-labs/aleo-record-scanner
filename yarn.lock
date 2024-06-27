@@ -1923,10 +1923,10 @@
     enabled "2.0.x"
     kuler "^2.0.0"
 
-"@demox-labs/aleo-sdk-staging@^0.3.33":
-  version "0.3.33"
-  resolved "https://registry.yarnpkg.com/@demox-labs/aleo-sdk-staging/-/aleo-sdk-staging-0.3.33.tgz#1aca6ce87ad7a97df078ddb71d219b991086e823"
-  integrity sha512-Png6Q+uMmtTUiza4r2/mibTwkwGkm3uLnkSMGiZJKunPm7MKpMxUON7AuKN0ZJyP659kTFkBX3yPAKmUh0e2Ug==
+"@demox-labs/aleo-sdk-staging@^0.3.35":
+  version "0.3.35"
+  resolved "https://registry.yarnpkg.com/@demox-labs/aleo-sdk-staging/-/aleo-sdk-staging-0.3.35.tgz#9d7f074e808618138821887c8c6e6bb1b93bad27"
+  integrity sha512-vz6km2vyfqx2LzorYrou/DgmhGd8CRqRoopfXmie6uWB73/iWhAjeH+hvibcDRm7NRlAEcCejk3+gA3PvC1q4A==
 
 "@discoveryjs/json-ext@^0.5.0":
   version "0.5.7"

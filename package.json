@@ -37,7 +37,7 @@
   },
   "dependencies": {
     "@aws-sdk/client-cloudwatch-logs": "^3.293.0",
-    "@demox-labs/aleo-sdk-staging": "^0.3.33",
+    "@demox-labs/aleo-sdk-staging": "^0.3.35",
     "@noble/curves": "^1.0.0",
     "@types/async-lock": "^1.4.0",
     "@types/aws-sdk": "^2.7.0",

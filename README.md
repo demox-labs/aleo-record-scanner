@@ -2,11 +2,11 @@
 
 1. Install [docker desktop](https://www.docker.com/products/docker-desktop/).
 2. Install [Postgres](https://www.postgresql.org/download/).
-3. Install rust: `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`
-4. Install protobuf: ` brew install protobuf`
-5. Rename `.env.example` to `.env`.
-6. Run `yarn && yarn install`. 
-7. Start the local aleo database inside of a docker container: `yarn local-db-up`
+3. Install protobuf: ` brew install protobuf`.
+4. Rename `.env.example` to `.env`.
+5. Run `yarn && yarn install`.
+6. Start the local aleo database inside of a docker container: `yarn local-db-up`.
+7. Apply database migrations: `yarn migrate`.
 8. Run `yarn start:dev`.
 
 Tests:
